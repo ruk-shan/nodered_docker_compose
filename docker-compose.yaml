@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  node-red:
+    container_name: mosquitto
+    image: nodered/node-red:latest
+    environment:
+      - TZ=Asia/Singapore
+    ports:
+      - "5003:1880"
+    volumes:
+      - ./data:/data
